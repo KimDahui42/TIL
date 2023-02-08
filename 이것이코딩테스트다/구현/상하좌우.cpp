@@ -35,9 +35,7 @@ int main(){
                 }
                 break;
         }
-         cout<<current_r<<" , "<<current_c<<endl;
     }
-    cout<<"=========================\n"<<endl;
     cout<<current_r<<" , "<<current_c<<endl;
     return 0;
 }
