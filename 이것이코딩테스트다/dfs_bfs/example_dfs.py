@@ -1,17 +1,18 @@
 from collections import deque
 
 def dequeDfs(graph, start):
-    visited=[]
+    visited=[start]
     print()
     # 큐(queue) 구현을 위해 deque 라이브러리 사용
     queue=deque(start)
     # 큐가 빌 때까지 반복
     while queue:
         node=queue.pop()
-        print(node)
-        if node not in visited:
-            visited.append(node)
-            queue.extend(graph[node])
+        for i in graph[node]:
+            if i not in visited:
+                visited.append(i)
+                queue.extend(i)
+        
 
 
 
@@ -43,4 +44,4 @@ visited=[False]*9
 
 # 정의된 dfs 함수 호출
 dfs(graph,1,visited)
-dequeDfs(graph,graph[1])
+dequeDfs(graph,1)
