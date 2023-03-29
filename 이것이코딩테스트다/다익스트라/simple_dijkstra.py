@@ -25,7 +25,7 @@ def get_smallest():
     for i in range(1,n+1):
         if distance [i]<min_value and not visited[i]:
             min_value=distance[i]
-            index=1
+            index=i
     return index
 
 def dijkstra(start):
